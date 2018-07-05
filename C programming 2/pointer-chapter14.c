@@ -26,6 +26,7 @@ void SquareByRefrence(int *ptr) {
 	printf("num의 제곱: %d \n", *ptr);
 }*/ 
 /* 2. 입력받은 세 수의 자리를 바꾸어주는 함수.
+Ver.1
 #include<stdio.h>
 void Swap3(int *temp1, int *temp2, int *temp3);
 int num1, num2, num3;
@@ -41,4 +42,22 @@ void Swap3(int *temp1, int *temp2, int *temp3) {
 	num2 = *temp3;
 	num3 = *temp1;
 	printf("num1=%d \num2=%d \num3=%d \n", num1, num2, num3);
+}
+Ver.2
+#include<stdio.h>
+void Swap3(int *temp1, int *temp2, int *temp3);
+int num1, num2, num3;
+int main(void) {
+	printf("num1="); scanf("%d", &num1);
+	printf("num2="); scanf("%d", &num2);
+	printf("num3="); scanf("%d", &num3);
+	Swap3(&num1, &num2, &num3);
+	return 0;
+}
+void Swap3(int *temp1, int *temp2, int *temp3) {
+	int temp = *temp1;
+	*temp1=*temp2;
+	*temp2=*temp3;
+	*temp3=temp;
+	printf("num1=%d \num2=%d \num3=%d \n", *temp1, *temp2, *temp3);
 }*/
