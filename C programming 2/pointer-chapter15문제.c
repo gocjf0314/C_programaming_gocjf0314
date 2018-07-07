@@ -58,5 +58,60 @@ int Palindrome(char pstr[], char pstr2[], int len) {
 	printf("회문입니다. \n");
 	return 0;
 }*/
+/* 원하는 배열의 길이를 입력받은 후 서로다른 숫자들을 랜덤으로 입력해서 오름차순,내림차순으로 출력하는 함수.
 #include<stdio.h>
-int Bubble(int *ptr, int i, )
+void BubbleUp(int ptr[], int len);
+void BubbleDown(int ptr[], int len);
+int main(void) {
+	int arr[10];
+	int k;
+	printf("원하는 배열의 길이를 입력하시오.(단, 1<=k<=10) ");
+	scanf("%d", &k);
+	for (int i = 0; i < k; ++i) {
+		printf("arr[%d]=", i);
+		scanf("%d", &arr[i]);
+	}
+	for (int i = 0; i < k; ++i) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+	printf("오름차순 배열: ");
+	BubbleUp(arr, k);
+	printf("내림차순 배열: ");
+	BubbleDown(arr, k);
+	return 0;
+}
+void BubbleUp(int ptr[], int len) {
+	int i, c;
+	int temp;
+	for (c = 0; c < len - 1; ++c) {
+		for (i = 0; i < (len - c) - 1; ++i) {
+			if (ptr[i] > ptr[i + 1]) {
+				temp = ptr[i];
+				ptr[i] = ptr[i + 1];
+				ptr[i + 1] = temp;
+			}
+		}
+	}
+	for (int i = 0; i < len; i += 1) {
+		printf("%d ", ptr[i]);
+	}
+	printf("\n");
+}
+void BubbleDown(int ptr[], int len) {
+	int i, c;
+	int temp;
+	for (c = 0; c < len - 1; ++c) {
+		for (i = 0; i < (len - c) - 1; ++i) {
+			if (ptr[i] < ptr[i + 1]) {
+				temp = ptr[i];
+				ptr[i] = ptr[i + 1];
+				ptr[i + 1] = temp;
+			}
+		}
+	}
+	for (int i = 0; i < len; i += 1) {
+		printf("%d ", ptr[i]);
+	}
+	printf("\n");
+}*/
