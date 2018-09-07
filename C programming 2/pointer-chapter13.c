@@ -1,4 +1,5 @@
-/*1.
+/*chapter13¹®Á¦
+1.
 #include<stdio.h>
 int main(void) {
 	int arr[5] = { 1, 2, 3, 4, 5 };

@@ -2,7 +2,7 @@
 #include<stdio.h>
 int main(void) {
 	int arr1[3][9];
-	int a, b;// a:가로, b:세로
+	int a, b;// a:세로, b:가로
 	for (a = 0 ; a < 3; ++a) {
 		for (b = 0; b < 9; ++b) {
 			printf("arr1[%d][%d]=", a, b);

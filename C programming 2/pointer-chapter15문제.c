@@ -1,4 +1,4 @@
-/*도전2-10진수를 2진수로 바꾸어주기
+/* 도전2-10진수를 2진수로 바꾸어주기
 #include<stdio.h>
 void Binary(int *ptr);
 int main(void) {
@@ -10,7 +10,7 @@ void Binary(int *ptr) {
 	int k, i, a;
 	printf("2진수로 변환할 10진수를 입력하시오.");
 	scanf_s("%d", &a);
-	for (k = 0, i = 0; a != 0; ) {
+	for (k = 0, i = 0;
 		*(ptr - i) = a % 2;
 		a = a / 2;
 		if (a != 0) {
@@ -114,4 +114,50 @@ void BubbleDown(int ptr[], int len) {
 		printf("%d ", ptr[i]);
 	}
 	printf("\n");
+}*/
+
+/* 3. 길이가 10인 배열을 선언 후 정수를 입력받아 홀수는 앞, 짝수는 뒤에서부터 채우기
+#include<stdio.h>
+
+void FirstOdd(int* ptr1, int len);
+
+int main(void) {
+	int arr[10];
+	int i;
+	int len=sizeof(arr)/sizeof(int);
+
+	for (i = 0; i < len; i++) {
+		printf("arr[%d]=", i);
+		scanf("%d", &arr[i]);
+	}
+
+	FirstOdd(&arr[0], len);
+
+	printf("배열의 요소 출력: ");
+	for (i = 0; i < len; i++) {
+		printf("%d, ", arr[i]);
+	}
+	printf("\n");
+	return 0;
+}
+
+void FirstOdd(int* ptr1, int len) {
+	int arr1[10];
+	int i;
+	int k = 0, s = len-1;
+
+	for (i = 0; i < len; i++) {
+		if (ptr1[i] % 2 == 1) {
+			arr1[k] = ptr1[i];
+			k++;
+		}
+		else if (ptr1[i] % 2 == 0) {
+			arr1[s] = ptr1[i];
+			s--;
+		}
+	}
+
+	for (i = 0; i < len; i++) {
+		ptr1[i] = arr1[i];
+	}
 }*/

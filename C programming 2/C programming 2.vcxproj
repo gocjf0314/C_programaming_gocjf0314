@@ -139,8 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="pointer-1.c" />
-    <ClCompile Include="pointer-2.c" />
+    <ClCompile Include="chapter.10 도전 프로그래밍.c" />
+    <ClCompile Include="pointer-chapter12.c" />
+    <ClCompile Include="pointer-chapter13.c" />
+    <ClCompile Include="pointer-chapter14.c" />
+    <ClCompile Include="pointer-chapter15문제.c" />
+    <ClCompile Include="pointer-chapter16.c" />
+    <ClCompile Include="pointer-chapter17.c" />
+    <ClCompile Include="pointer-chapter20문제.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
